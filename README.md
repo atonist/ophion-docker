@@ -10,7 +10,7 @@ docker run -d \
     -p 9999:9999 \
     -v /home/user/ophion-docker/config:/usr/local/etc \
     -v /home/user/ophion-docker/certs/:/certs \
-    ophion
+    dbrown786/ophion:latest
 ```
 
 The latest dockerized ophion can be pulled via docker pull dbrown786/ophion:latest.
