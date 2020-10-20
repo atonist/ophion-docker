@@ -1,0 +1,16 @@
+version: "3"
+services:
+  ophion:
+    user: 1002:1002
+    network_mode: bridge
+    ports:
+    - 5000:5000
+    - 6665-6669:6665-6669
+    - 6697:6697
+    - 9999:9999
+    image: dbrown786/ophion:latest
+    restart: always
+    volumes:
+    - /var/containers/ophion/config:/usr/local/etc
+    - /var/containers/ophion/logs:/usr/local/logs
+    - /etc/letsencrypt/archive/ircx.us/:/certs
