@@ -1,6 +1,7 @@
 version: "3"
 services:
   ophion:
+    container_name: ophion
     user: 1000:1000
     network_mode: bridge
     ports:
