@@ -1,0 +1,16 @@
+version: "3"
+services:
+  ophion:
+    user: 1000:1000
+    network_mode: bridge
+    ports:
+    - 5000:5000
+    - 6665-6669:6665-6669
+    - 6697:6697
+    - 9999:9999
+    image: dbrown786/ophion:latest
+    restart: always
+    volumes:
+    - /localtion/to/ophion/config:/usr/local/etc
+    - /location/to/ophion/logs:/usr/local/logs
+    - /location/to/certs:/certs
